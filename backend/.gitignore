@@ -1,0 +1,66 @@
+# Secrets and local config
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+# Variant templates such as .env.docker.example. Without this, `.env.*` swallows
+# them and a fresh clone has nothing to copy from.
+!.env.*.example
+
+# Python caches and test output
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Local data and logs
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.dump
+*.bak
+*.backup
+uploads/
+media/
+storage/
+tmp/
+temp/
+*.log
+logs/
+
+# Credentials and certificates
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+secrets.*
+credentials.*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~

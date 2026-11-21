@@ -1,0 +1,26 @@
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+sqlalchemy==2.0.36
+alembic==1.14.0
+psycopg2-binary==2.9.10
+redis==5.2.1
+celery==5.4.0
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+# Pinned deliberately. passlib 1.7.4 reads bcrypt.__about__.__version__, which
+# bcrypt removed in 4.1, so anything newer logs a trapped AttributeError on every
+# password hash. 4.0.1 is the last release passlib can introspect. Hash format is
+# unchanged, so existing passwords keep verifying.
+bcrypt==4.0.1
+python-multipart==0.0.17
+pydantic[email]==2.10.3
+pydantic-settings==2.6.1
+httpx==0.28.1
+python-dotenv==1.0.1
+sentry-sdk==2.19.2
+pyotp==2.9.0
+qrcode[pil]==8.0
+pillow==11.0.0
+structlog==24.4.0
+pytest==8.3.4
+pytest-asyncio==0.24.0
